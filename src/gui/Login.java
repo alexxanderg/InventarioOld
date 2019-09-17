@@ -139,6 +139,10 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		lblNewLabel_2.setIcon(new ImageIcon(img3));
 		lblNewLabel_2.setBounds(67, 247, 41, 41);
 		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblSdasdasdasdasdadsasdasasdads = new JLabel("sdasdasdasdasdadsasdasasdads");
+		lblSdasdasdasdasdadsasdasasdads.setBounds(118, 222, 182, 24);
+		contentPane.add(lblSdasdasdasdasdadsasdasasdads);
 		cargar();
 	}
 	public void actionPerformed(ActionEvent e) {
