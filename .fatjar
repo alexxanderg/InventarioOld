@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sat Jul 14 20:21:15 COT 2018
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=TuFarma.jar
+manifest.mergeall=true
+manifest.mainclass=gui.Login
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
