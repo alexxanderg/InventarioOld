@@ -8,6 +8,8 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import com.mxrck.autocompleter.TextAutoCompleter;
+
+import clases.AbstractJasperReports;
 import clases.Productos;
 import guiSecundarios.ListaDeProductos;
 import guiSecundarios.NuevoProducto;
@@ -299,9 +301,8 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		contentPane.add(lblNombreDeCliente);
 
 		txtCopias = new JTextField();
-		txtCopias.setEditable(false);
 		txtCopias.addKeyListener(this);
-		txtCopias.setText("0");
+		txtCopias.setText("1");
 		txtCopias.setHorizontalAlignment(SwingConstants.RIGHT);
 		txtCopias.setForeground(Color.BLACK);
 		txtCopias.setFont(new Font("Segoe UI", Font.BOLD, 15));
@@ -327,7 +328,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		lblLogo = new JLabel("");
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogo.setBounds(1065, 83, 271, 206);
-		Image img = new ImageIcon(this.getClass().getResource("/almacen.png")).getImage();
+		Image img = new ImageIcon(this.getClass().getResource("/imgalmacen.png")).getImage();
 		lblLogo.setIcon(new ImageIcon(img));
 		contentPane.add(lblLogo);
 		
@@ -797,10 +798,8 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 								 */
 								try {
 									con = MySQLConexion.getConection();
-									JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(
-											"D:\\ INFORMACION_DEL_SISTEMA\\rComprobanteVenta.jasper");
-									JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parameters,
-											con);
+									JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile("bin/rComprobante.jasper");
+									JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parameters,con);
 									// AbstractJasperReports.showViewer();
 									JasperPrintManager.printReport(jasperPrint, false);
 								} catch (JRException ex) {
@@ -819,6 +818,22 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 			}
 		}
 	}
+	
+	/*
+			try {
+				con = MySQLConexion.getConection();
+				String nventa = txtNVenta.getText();
+				Map<String, Object> parameters = new HashMap();
+				parameters.put("prtCodVen", Integer.parseInt(nventa));
+				new AbstractJasperReports().createReport(con, "rVentaDetalle.jasper", parameters);
+				AbstractJasperReports.showViewer();
+				con.close();
+				txtNVenta.setText(null);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, "No se encontó la venta " + e);
+			}
+		}
+	}*/
 
 	public int verificarStock() {
 		for (int i = 0; i < tbCompras.getRowCount(); i++) {

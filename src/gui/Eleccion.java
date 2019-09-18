@@ -85,7 +85,7 @@ public class Eleccion extends JFrame implements ActionListener, WindowListener {
 		contentPane.add(txtqueDeseaHacer);
 		txtqueDeseaHacer.setColumns(10);
 		
-		btnAlmacen = new JButton(new ImageIcon(this.getClass().getResource("/almacen.png")));
+		btnAlmacen = new JButton(new ImageIcon(this.getClass().getResource("/imgalmacen.png")));
 		btnAlmacen.setForeground(Color.WHITE);
 		btnAlmacen.setBackground(Color.DARK_GRAY);
 		btnAlmacen.setFont(new Font("EngraversGothic BT", Font.BOLD, 20));
@@ -94,7 +94,7 @@ public class Eleccion extends JFrame implements ActionListener, WindowListener {
 		btnAlmacen.setBounds(0, 74, 350, 200);
 		contentPane.add(btnAlmacen);
 		
-		btnUsuarios = new JButton(new ImageIcon(this.getClass().getResource("/usuarios.png")));
+		btnUsuarios = new JButton(new ImageIcon(this.getClass().getResource("/imgusuarios.png")));
 		btnUsuarios.setForeground(Color.WHITE);
 		btnUsuarios.setBackground(Color.DARK_GRAY);
 		btnUsuarios.setFont(new Font("EngraversGothic BT", Font.BOLD, 20));
@@ -103,7 +103,7 @@ public class Eleccion extends JFrame implements ActionListener, WindowListener {
 		btnUsuarios.setBounds(352, 74, 350, 200);
 		contentPane.add(btnUsuarios);
 		
-		btnReportes = new JButton(new ImageIcon(this.getClass().getResource("/reportes.png")));		
+		btnReportes = new JButton(new ImageIcon(this.getClass().getResource("/imgreportes.png")));		
 		btnReportes.setForeground(Color.WHITE);
 		btnReportes.setBackground(Color.DARK_GRAY);
 		btnReportes.setFont(new Font("EngraversGothic BT", Font.BOLD, 20));
@@ -112,7 +112,7 @@ public class Eleccion extends JFrame implements ActionListener, WindowListener {
 		btnReportes.setBounds(0, 277, 350, 267);
 		contentPane.add(btnReportes);
 		
-		btnVentas = new JButton(new ImageIcon(this.getClass().getResource("/vender.png")));
+		btnVentas = new JButton(new ImageIcon(this.getClass().getResource("/imgvender.png")));
 		btnVentas.setForeground(Color.WHITE);
 		btnVentas.setBackground(Color.DARK_GRAY);
 		btnVentas.setFont(new Font("EngraversGothic BT", Font.BOLD, 20));

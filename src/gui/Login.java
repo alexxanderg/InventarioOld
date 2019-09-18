@@ -42,7 +42,6 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
-	private JLabel lblMaster;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -121,7 +120,7 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		Image img = new ImageIcon(this.getClass().getResource("/banner.png")).getImage();
+		Image img = new ImageIcon(this.getClass().getResource("/imgbanner.png")).getImage();
 		lblNewLabel.setIcon(new ImageIcon(img));
 		lblNewLabel.setBounds(0, 0, 597, 160);
 		contentPane.add(lblNewLabel);
@@ -129,21 +128,17 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		Image img2 = new ImageIcon(this.getClass().getResource("/user.jpg")).getImage();
+		Image img2 = new ImageIcon(this.getClass().getResource("/imgbtnuser.jpg")).getImage();
 		lblNewLabel_1.setIcon(new ImageIcon(img2));
 		lblNewLabel_1.setBounds(67, 178, 41, 41);
 		contentPane.add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		Image img3 = new ImageIcon(this.getClass().getResource("/pass.jpg")).getImage();
+		Image img3 = new ImageIcon(this.getClass().getResource("/imgbtnpass.jpg")).getImage();
 		lblNewLabel_2.setIcon(new ImageIcon(img3));
 		lblNewLabel_2.setBounds(67, 247, 41, 41);
 		contentPane.add(lblNewLabel_2);
-		
-		lblMaster = new JLabel("MASSTER");
-		lblMaster.setBounds(273, 299, 80, 14);
-		contentPane.add(lblMaster);
 		cargar();
 	}
 	public void actionPerformed(ActionEvent e) {

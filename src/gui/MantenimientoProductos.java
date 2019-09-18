@@ -106,19 +106,19 @@ public class MantenimientoProductos extends JFrame implements ActionListener, Wi
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		btnAgregar = new JButton(new ImageIcon(this.getClass().getResource("/anadir.png")));
+		btnAgregar = new JButton(new ImageIcon(this.getClass().getResource("/imgbtnanadir.png")));
 		btnAgregar.setBackground(new Color(0, 0, 0));
 		btnAgregar.addActionListener(this);
 		btnAgregar.setBounds(139, 91, 105, 105);
 		contentPane.add(btnAgregar);
 
-		btnModificar = new JButton(new ImageIcon(this.getClass().getResource("/modificar.png")));
+		btnModificar = new JButton(new ImageIcon(this.getClass().getResource("/imgbtnmodificar.png")));
 		btnModificar.setBackground(new Color(0, 0, 0));
 		btnModificar.addActionListener(this);
 		btnModificar.setBounds(268, 91, 160, 105);
 		contentPane.add(btnModificar);
 
-		btnEliminar = new JButton(new ImageIcon(this.getClass().getResource("/eliminar.png")));
+		btnEliminar = new JButton(new ImageIcon(this.getClass().getResource("/imgbtneliminar.png")));
 		btnEliminar.setBackground(new Color(0, 0, 0));
 		btnEliminar.addActionListener(this);
 		btnEliminar.setBounds(449, 91, 160, 105);
