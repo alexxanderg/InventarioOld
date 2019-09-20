@@ -302,20 +302,17 @@ public class Reportes extends JFrame implements ActionListener, WindowListener, 
 		contentPane.add(textField_1);
 
 		lblImprimirCopiaDe = new JLabel("<html>\u00A0Imprimir copia<br>de ticket de venta</html>");
-		lblImprimirCopiaDe.setEnabled(false);
 		lblImprimirCopiaDe.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImprimirCopiaDe.setFont(new Font("EngraversGothic BT", Font.BOLD, 35));
 		lblImprimirCopiaDe.setBounds(736, 365, 507, 78);
 		contentPane.add(lblImprimirCopiaDe);
 
 		lblNCopias = new JLabel("Cantidad de copias:");
-		lblNCopias.setEnabled(false);
 		lblNCopias.setFont(new Font("EngraversGothic BT", Font.BOLD, 20));
 		lblNCopias.setBounds(680, 475, 192, 30);
 		contentPane.add(lblNCopias);
 
 		txtNCopias = new JTextField();
-		txtNCopias.setEnabled(false);
 		txtNCopias.setText("1");
 		txtNCopias.addKeyListener(this);
 		txtNCopias.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -326,7 +323,6 @@ public class Reportes extends JFrame implements ActionListener, WindowListener, 
 		contentPane.add(txtNCopias);
 
 		btnImprimir = new JButton("IMPRIMIR");
-		btnImprimir.setEnabled(false);
 		btnImprimir.addActionListener(this);
 		btnImprimir.setForeground(Color.WHITE);
 		btnImprimir.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
@@ -335,7 +331,6 @@ public class Reportes extends JFrame implements ActionListener, WindowListener, 
 		contentPane.add(btnImprimir);
 
 		txtNVentaCopia = new JTextField();
-		txtNVentaCopia.setEnabled(false);
 		txtNVentaCopia.addKeyListener(this);
 		txtNVentaCopia.setHorizontalAlignment(SwingConstants.RIGHT);
 		txtNVentaCopia.setFont(new Font("Segoe UI", Font.BOLD, 15));
@@ -345,7 +340,6 @@ public class Reportes extends JFrame implements ActionListener, WindowListener, 
 		contentPane.add(txtNVentaCopia);
 
 		lblNVenta = new JLabel("Ticket de venta N\u00B0:");
-		lblNVenta.setEnabled(false);
 		lblNVenta.setFont(new Font("EngraversGothic BT", Font.BOLD, 20));
 		lblNVenta.setBounds(680, 528, 192, 30);
 		contentPane.add(lblNVenta);
@@ -715,7 +709,7 @@ public class Reportes extends JFrame implements ActionListener, WindowListener, 
 						 */
 						try {
 							JasperReport reporte = (JasperReport) JRLoader
-									.loadObjectFromFile("D:\\ INFORMACION_DEL_SISTEMA\\rComprobante.jasper");
+									.loadObjectFromFile("bin/rComprobante.jasper");
 							JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parameters, con);
 							JasperPrintManager.printReport(jasperPrint, false);
 						} catch (JRException ex) {
