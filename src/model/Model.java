@@ -27,10 +27,12 @@ public class Model {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		
-		try {		
+		try {
+			con = null;
 			con = MySQLConexion.getConection();
-			
-			String sql = "select * from tb_usuarios where usuario = ? COLLATE utf8_bin and pass = ? COLLATE utf8_bin ";
+			if(con != null);
+				JOptionPane.showMessageDialog(null, "CONECTADO");
+			String sql = "select * from tb_usuarios where usuario = ? and pass = ? ";
 			pst = con.prepareStatement(sql);
 			pst.setString(1, u.getUsuario());
 			pst.setString(2, u.getPassword());

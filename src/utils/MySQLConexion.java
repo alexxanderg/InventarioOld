@@ -1,4 +1,4 @@
-package utils;
+/*package utils;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
@@ -26,5 +26,38 @@ public class MySQLConexion {
 			e.printStackTrace();
 		}
 		return conn;
+	}
+}
+*/
+
+package utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
+public class MySQLConexion {
+	public MySQLConexion(){}
+	
+	private static String URL="jdbc:mysql://192.168.0.101:3306/db_inventario";
+	private static String USER="prueba";
+	private static String PASS="a  a123";
+	static{
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	public static Connection getConection(){
+		Connection con = null;
+		try {
+			con=DriverManager.getConnection(URL, USER, PASS);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return con;
 	}
 }
