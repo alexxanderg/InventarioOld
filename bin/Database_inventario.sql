@@ -42,7 +42,6 @@ foreign key (codproducto) references tb_productos(codproducto),
 primary key (codventa, codproducto)
 );
 
-
 -- Usuarios de prueba
 insert into tb_usuarios values('alex', 'Aa123', 'Alexander Gamarra', 1);
 insert into tb_usuarios values(	'admin', 'admin', 'ADMINISTRADOR', 0);

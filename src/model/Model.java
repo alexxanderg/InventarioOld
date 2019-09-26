@@ -30,8 +30,6 @@ public class Model {
 		try {
 			con = null;
 			con = MySQLConexion.getConection();
-			if(con != null);
-				JOptionPane.showMessageDialog(null, "CONECTADO");
 			String sql = "select * from tb_usuarios where usuario = ? and pass = ? ";
 			pst = con.prepareStatement(sql);
 			pst.setString(1, u.getUsuario());
