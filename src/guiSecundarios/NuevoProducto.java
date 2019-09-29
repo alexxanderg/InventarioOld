@@ -350,7 +350,7 @@ public class NuevoProducto extends JDialog implements ActionListener, KeyListene
 						v.setEnabled(true);
 						this.dispose();
 						v.dtm.addRow(new Object[] { 1, txtProducto.getText(), txtDeta.getText(), txtCantidad.getText(),
-								txtPrecioVenInd.getText(), txtPrecioVenInd.getText(), txtCodigo.getText() });
+								txtPrecioVenInd.getText(), txtPrecioVenInd.getText(), txtCodigo.getText(), txtPreComInd.getText() });
 						v.seleccionarRow();
 						// v.sumarSubTotales();
 						v.sumarTotal();
