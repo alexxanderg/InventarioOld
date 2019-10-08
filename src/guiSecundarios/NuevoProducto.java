@@ -28,6 +28,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
+import com.mxrck.autocompleter.TextAutoCompleter;
 
 import gui.Login;
 import gui.MantenimientoProductos;
@@ -55,6 +56,7 @@ public class NuevoProducto extends JDialog implements ActionListener, KeyListene
 	private JButton btnCrear;
 	private JLabel lblUMedida;
 	private JComboBox cbUMedida;
+	private TextAutoCompleter ac;
 
 	MantenimientoProductos inv;
 	Model model = new Model();
@@ -285,6 +287,19 @@ public class NuevoProducto extends JDialog implements ActionListener, KeyListene
 	}
 
 	public void cargar() {
+		
+		/*Jala al area de l texto Medicamento*/		
+		ac = new TextAutoCompleter(txtProducto);
+		Model model1 = new Model();
+		ResultSet rs1 = model1.cargarProductos( );
+		try {
+			while (rs1.next()) {
+				ac.addItem(rs1.getString("producto"));
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "ERROR: " + e);
+		}
+		
 		Model model = new Model();
 		ResultSet rs = model.ultimoProducto();
 		try {
