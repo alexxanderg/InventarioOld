@@ -141,7 +141,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		lblTotal.setBackground(new Color(50, 205, 50));
 		lblTotal.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTotal.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		lblTotal.setBounds(1147, 476, 178, 50);
+		lblTotal.setBounds(1147, 557, 178, 50);
 		contentPane.add(lblTotal);
 		btnNuevaVentana.setForeground(new Color(0, 255, 0));
 		btnNuevaVentana.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 39));
@@ -160,12 +160,12 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		btnLista.setBackground(new Color(30, 144, 255));
 		btnLista.setForeground(new Color(255, 255, 255));
 		btnLista.setFont(new Font("Century Gothic", Font.BOLD, 23));
-		btnLista.setBounds(36, 202, 156, 86);
+		btnLista.setBounds(344, 57, 156, 86);
 		contentPane.add(btnLista);
 
 		lblBuscarProducto = new JLabel("BUSCAR PRODUCTO:");
 		lblBuscarProducto.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		lblBuscarProducto.setBounds(36, 141, 311, 34);
+		lblBuscarProducto.setBounds(36, 141, 271, 34);
 		contentPane.add(lblBuscarProducto);
 
 		btnVender = new JButton("VENDER");
@@ -201,7 +201,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		btnDevolucion.setForeground(Color.WHITE);
 		btnDevolucion.setFont(new Font("Century Gothic", Font.BOLD, 23));
 		btnDevolucion.setBackground(new Color(30, 144, 255));
-		btnDevolucion.setBounds(373, 202, 216, 86);
+		btnDevolucion.setBounds(344, 186, 156, 86);
 		contentPane.add(btnDevolucion);
 
 		txtVentaDeProductos = new JTextField();
@@ -224,7 +224,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		btnLimpiarTabla.setForeground(Color.WHITE);
 		btnLimpiarTabla.setFont(new Font("Century Gothic", Font.BOLD, 23));
 		btnLimpiarTabla.setBackground(new Color(220, 20, 60));
-		btnLimpiarTabla.setBounds(599, 202, 156, 86);
+		btnLimpiarTabla.setBounds(727, 72, 156, 86);
 		contentPane.add(btnLimpiarTabla);
 
 		btnNuevoProducto = new JButton("<html>\u00A0Nuevo<br>producto</html>");
@@ -232,7 +232,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		btnNuevoProducto.setForeground(Color.WHITE);
 		btnNuevoProducto.setFont(new Font("Century Gothic", Font.BOLD, 23));
 		btnNuevoProducto.setBackground(new Color(30, 144, 255));
-		btnNuevoProducto.setBounds(202, 202, 161, 86);
+		btnNuevoProducto.setBounds(533, 57, 161, 86);
 		contentPane.add(btnNuevoProducto);
 
 		label = new JLabel("Paga con:");
@@ -240,7 +240,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		label.setHorizontalAlignment(SwingConstants.LEFT);
 		label.setForeground(Color.BLACK);
 		label.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		label.setBounds(1068, 286, 178, 38);
+		label.setBounds(1068, 367, 178, 38);
 		contentPane.add(label);
 
 		label_1 = new JLabel("S/.");
@@ -248,7 +248,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		label_1.setHorizontalAlignment(SwingConstants.LEFT);
 		label_1.setForeground(Color.BLACK);
 		label_1.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		label_1.setBounds(1068, 320, 76, 38);
+		label_1.setBounds(1068, 401, 76, 38);
 		contentPane.add(label_1);
 
 		txtPaga = new JTextField();
@@ -258,7 +258,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		txtPaga.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		txtPaga.setColumns(10);
 		txtPaga.setBackground(SystemColor.controlHighlight);
-		txtPaga.setBounds(1111, 328, 181, 34);
+		txtPaga.setBounds(1111, 409, 181, 34);
 		contentPane.add(txtPaga);
 
 		label_2 = new JLabel("Su vuelto es:");
@@ -266,7 +266,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		label_2.setHorizontalAlignment(SwingConstants.LEFT);
 		label_2.setForeground(Color.BLACK);
 		label_2.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		label_2.setBounds(1068, 379, 257, 38);
+		label_2.setBounds(1068, 460, 257, 38);
 		contentPane.add(label_2);
 
 		txtVuelto = new JTextField();
@@ -276,7 +276,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		txtVuelto.setEditable(false);
 		txtVuelto.setColumns(10);
 		txtVuelto.setBackground(SystemColor.controlHighlight);
-		txtVuelto.setBounds(1111, 418, 181, 34);
+		txtVuelto.setBounds(1111, 499, 181, 34);
 		contentPane.add(txtVuelto);
 
 		label_3 = new JLabel("S/.");
@@ -284,7 +284,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		label_3.setHorizontalAlignment(SwingConstants.LEFT);
 		label_3.setForeground(Color.BLACK);
 		label_3.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		label_3.setBounds(1068, 414, 64, 38);
+		label_3.setBounds(1068, 495, 64, 38);
 		contentPane.add(label_3);
 
 		txtCliente = new JTextField();
@@ -292,12 +292,12 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		txtCliente.setFont(new Font("Segoe UI", Font.BOLD | Font.ITALIC, 20));
 		txtCliente.setColumns(10);
 		txtCliente.setBackground(SystemColor.controlHighlight);
-		txtCliente.setBounds(334, 83, 606, 34);
+		txtCliente.setBounds(1277, 69, 606, 34);
 		contentPane.add(txtCliente);
 
 		lblNombreDeCliente = new JLabel("Nombre de Cliente:");
 		lblNombreDeCliente.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		lblNombreDeCliente.setBounds(36, 83, 311, 34);
+		lblNombreDeCliente.setBounds(979, 69, 311, 34);
 		contentPane.add(lblNombreDeCliente);
 
 		txtCopias = new JTextField();
@@ -322,12 +322,12 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 		lblTotalS.setBackground(new Color(50, 205, 50));
 		lblTotalS.setHorizontalAlignment(SwingConstants.LEFT);
 		lblTotalS.setFont(new Font("EngraversGothic BT", Font.BOLD, 25));
-		lblTotalS.setBounds(1017, 476, 127, 50);
+		lblTotalS.setBounds(1017, 557, 127, 50);
 		contentPane.add(lblTotalS);
 
 		lblLogo = new JLabel("");
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLogo.setBounds(1065, 83, 271, 206);
+		lblLogo.setBounds(1065, 150, 271, 206);
 		Image img = new ImageIcon(this.getClass().getResource("/imgalmacen.png")).getImage();
 		lblLogo.setIcon(new ImageIcon(img));
 		contentPane.add(lblLogo);
