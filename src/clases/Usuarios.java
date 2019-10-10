@@ -42,7 +42,7 @@ public class Usuarios {
 	
 	@Override
 	public String toString(){
-		return usuario;
+		return nombre;
 	}
 	
 	public String getUsuario() {
