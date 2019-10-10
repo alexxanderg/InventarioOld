@@ -32,6 +32,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 
 public class Login extends JFrame implements ActionListener, KeyListener {
 
@@ -42,6 +45,7 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
+	private JLabel lblCreditos;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -85,7 +89,7 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		setTitle("Login");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 599, 403);
+		setBounds(100, 100, 599, 415);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(SystemColor.menu);
@@ -139,6 +143,27 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		lblNewLabel_2.setIcon(new ImageIcon(img3));
 		lblNewLabel_2.setBounds(67, 247, 41, 41);
 		contentPane.add(lblNewLabel_2);
+		
+		lblCreditos = new JLabel("Sistema desarrollado por BYTE X BYTE PER\u00DA E.I.R.L");
+		lblCreditos.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				mouseClickedLblNewLabel_3(arg0);
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				mouseEnteredLblNewLabel_3(e);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				mouseExitedLblCreditos(e);
+			}
+		});
+		lblCreditos.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCreditos.setForeground(SystemColor.controlShadow);
+		lblCreditos.setFont(new Font("Tahoma", Font.ITALIC, 12));
+		lblCreditos.setBounds(0, 372, 597, 14);
+		contentPane.add(lblCreditos);
 		cargar();
 	}
 	public void actionPerformed(ActionEvent e) {
@@ -230,5 +255,14 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		} catch (IOException e1) {
 			//JOptionPane.showMessageDialog(null, e1);
 		}
+	}
+	protected void mouseClickedLblNewLabel_3(MouseEvent arg0) {
+		JOptionPane.showMessageDialog(null, "Aqui agregar ventana de información");
+	}
+	protected void mouseEnteredLblNewLabel_3(MouseEvent e) {
+		lblCreditos.setForeground(SystemColor.BLUE);
+	}
+	protected void mouseExitedLblCreditos(MouseEvent e) {
+		lblCreditos.setForeground(SystemColor.controlShadow);
 	}
 }
