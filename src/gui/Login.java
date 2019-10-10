@@ -159,10 +159,12 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		ingresante.setUsuario(usuIngre);
 		ingresante.setPassword(passIngre);
 		Usuarios usu = modelo.obtenerUsuario(ingresante);
+		String nombreUsuario = null;
 		if(usu!=null){
-			JOptionPane.showMessageDialog(contentPane, "Bienvenido: " + usu.getNombre());
+			nombreUsuario = usu.getNombre();
+			JOptionPane.showMessageDialog(contentPane, "Bienvenido: " + nombreUsuario);
 			if(usu.getTipo() == 0){
-				Eleccion el = new Eleccion(txtUsuario.getText());
+				Eleccion el = new Eleccion(nombreUsuario );
 				el.setLocationRelativeTo(null);
 				el.setVisible(true);
 				txtUsuario.requestFocus();
@@ -171,7 +173,7 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 				this.setVisible(false);
 			}
 			else{
-				Ventas v = new Ventas(1, null, txtUsuario.getText());
+				Ventas v = new Ventas(1, null, nombreUsuario);
 				v.setVisible(true);
 				txtUsuario.setText(null);
 				txtPass.setText(null);
