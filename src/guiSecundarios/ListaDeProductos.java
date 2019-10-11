@@ -85,6 +85,7 @@ public class ListaDeProductos extends JDialog implements ActionListener, WindowL
 		getContentPane().add(scrollPane);
 		
 		tbProductos = new JTable();
+		tbProductos.setFont(new Font("Tw Cen MT", Font.BOLD | Font.ITALIC, 17));
 		scrollPane.setViewportView(tbProductos);
 		
 		txtListaCompletaDe = new JTextField();
@@ -122,7 +123,7 @@ public class ListaDeProductos extends JDialog implements ActionListener, WindowL
 				String codigo = tbProductos.getValueAt(tbProductos.getSelectedRow(), 0).toString();
 				int rpt = v.AnadirProductosdeListaCompleta(codigo, cantidad);
 				if(rpt == 1){
-					v.dtm.addRow(new Object[]{cantidad, tbProductos.getValueAt(tbProductos.getSelectedRow(), 1), tbProductos.getValueAt(tbProductos.getSelectedRow(), 2), tbProductos.getValueAt(tbProductos.getSelectedRow(), 4), tbProductos.getValueAt(tbProductos.getSelectedRow(), 6), "", tbProductos.getValueAt(tbProductos.getSelectedRow(), 0), tbProductos.getValueAt(tbProductos.getSelectedRow(), 5)});
+					v.dtm.addRow(new Object[]{cantidad, tbProductos.getValueAt(tbProductos.getSelectedRow(), 1), tbProductos.getValueAt(tbProductos.getSelectedRow(), 2), tbProductos.getValueAt(tbProductos.getSelectedRow(), 4), tbProductos.getValueAt(tbProductos.getSelectedRow(), 5), "", tbProductos.getValueAt(tbProductos.getSelectedRow(), 0),tbProductos.getValueAt(tbProductos.getSelectedRow(), 6)});
 					v.seleccionarRow();
 				}
 				v.sumarSubTotales();
@@ -139,12 +140,12 @@ public class ListaDeProductos extends JDialog implements ActionListener, WindowL
 		DefaultTableModel dtm = new DefaultTableModel();
 		tb = this.tbProductos;
 		tb.setModel(dtm);
-		dtm.setColumnIdentifiers(new Object[]{"Codigo", "Producto", "Detalle", "Uni. Medida", "Cantidad", "PrecioComp", "PrecioVenta"});
+		dtm.setColumnIdentifiers(new Object[]{"Codigo", "Producto", "Detalle", "Uni. Medida", "Cantidad","PrecioVenta","PrecioComp"});
 		Model model = new Model();
 		rs = model.cargarProductos();
 		try {
 			while(rs.next())
-				dtm.addRow(new Object[]{rs.getString("codproducto"), rs.getString("producto"), rs.getString("detalles"), rs.getString("unimedida"), rs.getFloat("cantidad"), rs.getFloat("precioCo"), rs.getFloat("precioVe")});
+				dtm.addRow(new Object[]{rs.getString("codproducto"), rs.getString("producto"), rs.getString("detalles"), rs.getString("unimedida"), rs.getFloat("cantidad"), rs.getFloat("precioVe"), rs.getFloat("precioCo")});
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "ERROR: " + e);
 		}
@@ -155,13 +156,13 @@ public class ListaDeProductos extends JDialog implements ActionListener, WindowL
 	}
 	private void ajustarAnchoColumnas() {
 		TableColumnModel tcm = tbProductos.getColumnModel();
-		tcm.getColumn(0).setPreferredWidth(anchoColumna(7));  // Codigo
-		tcm.getColumn(1).setPreferredWidth(anchoColumna(35));  // Producto
-		tcm.getColumn(2).setPreferredWidth(anchoColumna(30));  // Detalle
-		tcm.getColumn(3).setPreferredWidth(anchoColumna(8));  // Uni. Medida
-		tcm.getColumn(4).setPreferredWidth(anchoColumna(7));  // Stock
-		tcm.getColumn(5).setPreferredWidth(anchoColumna(0));  // PrecioC
-		tcm.getColumn(6).setPreferredWidth(anchoColumna(8));  // PrecioV
+		tcm.getColumn(0).setPreferredWidth(anchoColumna(10));  // Codigo
+		tcm.getColumn(1).setPreferredWidth(anchoColumna(30));  // Producto
+		tcm.getColumn(2).setPreferredWidth(anchoColumna(25));  // Detalle
+		tcm.getColumn(3).setPreferredWidth(anchoColumna(12));  // Uni. Medida
+		tcm.getColumn(4).setPreferredWidth(anchoColumna(11));  // Stock
+		tcm.getColumn(5).setPreferredWidth(anchoColumna(12));  // PrecioC
+		tcm.getColumn(6).setPreferredWidth(anchoColumna(0));  // PrecioV
 		
 		/*DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
 		tcr.setHorizontalAlignment(SwingConstants.CENTER);

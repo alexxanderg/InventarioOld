@@ -448,6 +448,18 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 	}
 
 	public void keyTyped(KeyEvent e) {
+		char c = e.getKeyChar();
+		if ((c < '0' || c > '9') && (c != (char) KeyEvent.VK_DELETE) && (c != (char) KeyEvent.VK_BACK_SPACE)
+				&& (c != (char) KeyEvent.VK_ENTER) && (c != '.')) {
+			e.consume();
+		}
+		if (txtPaga.getText().length() == 10) {
+			e.consume();
+		}
+		if (c == '.' && txtPaga.getText().contains(".")) {
+			e.consume();
+		}
+		
 		if (e.getSource() == txtCopias) {
 			keyTypedTxtCopias(e);
 		}
@@ -958,12 +970,18 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 			try {
 				rs.beforeFirst();
 				while (rs.next()) {
+//					new Object[] { "Cant.", "Producto", "Detalle", "Stock", "Precio Uni", "SubTotal", "Cod.", "PC" });
 					ResultSet rs2 = model.buscarProducto(rs.getString("codproducto"));
 					rs2.next();
-					dtm.addRow(new Object[] { rs.getString("cantidad"), rs2.getString("producto"),
+					dtm.addRow(new Object[] { 
+							rs.getString("cantidad"), //
+							rs2.getString("producto"),
 							rs2.getString("detalles"),
-							Float.parseFloat(rs2.getString("cantidad")) + Float.parseFloat(rs.getString("cantidad")),
-							rs.getFloat("prevenFin"), "0", rs.getString("codproducto") });
+							Float.parseFloat(rs2.getString("cantidad")) + Float.parseFloat(rs.getString("cantidad")), //Stock de la tabla
+							rs.getFloat("prevenFin"), //Precio al que se ha vendido si hay modificacion
+							"0", // Sub total temporal
+							rs.getString("codproducto"),
+							rs2.getFloat("precioCo")}); //Codigo
 				}
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(null, "ERROR: " + e);

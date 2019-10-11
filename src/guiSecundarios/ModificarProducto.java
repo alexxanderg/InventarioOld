@@ -111,7 +111,7 @@ public class ModificarProducto extends JDialog implements ActionListener, KeyLis
 		txtCodigo.setEditable(false);
 		txtCodigo.addKeyListener(this);
 		txtCodigo.setForeground(SystemColor.windowBorder);
-		txtCodigo.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtCodigo.setHorizontalAlignment(SwingConstants.LEFT);
 		txtCodigo.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		txtCodigo.setColumns(10);
 		txtCodigo.setBackground(SystemColor.controlHighlight);
@@ -128,7 +128,7 @@ public class ModificarProducto extends JDialog implements ActionListener, KeyLis
 		txtProducto = new JTextField();
 		txtProducto.addKeyListener(this);
 		txtProducto.setForeground(SystemColor.windowBorder);
-		txtProducto.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtProducto.setHorizontalAlignment(SwingConstants.LEFT);
 		txtProducto.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		txtProducto.setColumns(10);
 		txtProducto.setBackground(SystemColor.controlHighlight);
@@ -163,7 +163,7 @@ public class ModificarProducto extends JDialog implements ActionListener, KeyLis
 		txtPreComInd = new JTextField();
 		txtPreComInd.addKeyListener(this);
 		txtPreComInd.setForeground(SystemColor.windowBorder);
-		txtPreComInd.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtPreComInd.setHorizontalAlignment(SwingConstants.LEFT);
 		txtPreComInd.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		txtPreComInd.setColumns(10);
 		txtPreComInd.setBackground(SystemColor.controlHighlight);
@@ -181,7 +181,7 @@ public class ModificarProducto extends JDialog implements ActionListener, KeyLis
 		txtCantidad = new JTextField();
 		txtCantidad.addKeyListener(this);
 		txtCantidad.setForeground(SystemColor.windowBorder);
-		txtCantidad.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtCantidad.setHorizontalAlignment(SwingConstants.LEFT);
 		txtCantidad.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		txtCantidad.setColumns(10);
 		txtCantidad.setBackground(SystemColor.controlHighlight);
@@ -199,7 +199,7 @@ public class ModificarProducto extends JDialog implements ActionListener, KeyLis
 		txtPrecioVenInd = new JTextField();
 		txtPrecioVenInd.addKeyListener(this);
 		txtPrecioVenInd.setForeground(SystemColor.windowBorder);
-		txtPrecioVenInd.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtPrecioVenInd.setHorizontalAlignment(SwingConstants.LEFT);
 		txtPrecioVenInd.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		txtPrecioVenInd.setColumns(10);
 		txtPrecioVenInd.setBackground(SystemColor.controlHighlight);
@@ -242,7 +242,7 @@ public class ModificarProducto extends JDialog implements ActionListener, KeyLis
 		txtModificarProducto.setBackground(Color.DARK_GRAY);
 		txtModificarProducto.setBounds(0, 0, 520, 58);
 		getContentPane().add(txtModificarProducto);
-		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{txtCodigo, txtProducto, txtDeta, txtCantidad, cbUMedida, txtPreComInd, txtPrecioVenInd, btnModificar}));
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{txtCodigo, txtProducto, txtDeta, cbUMedida, txtCantidad, txtPreComInd, txtPrecioVenInd, btnModificar}));
 		cargarDatos();
 	}
 	public void actionPerformed(ActionEvent arg0) {

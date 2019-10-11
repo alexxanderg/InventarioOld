@@ -225,7 +225,7 @@ public class NuevoProducto extends JDialog implements ActionListener, KeyListene
 		txtDeta.setBackground(SystemColor.controlHighlight);
 		txtDeta.setBounds(158, 208, 352, 25);
 		getContentPane().add(txtDeta);
-		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{txtCodigo, txtProducto, cbUMedida, txtCantidad, txtPreComInd, txtPrecioVenInd, btnCrear}));
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{txtCodigo, txtProducto, txtDeta, cbUMedida, txtCantidad, txtPreComInd, txtPrecioVenInd, btnCrear}));
 		cargar();
 	}
 
