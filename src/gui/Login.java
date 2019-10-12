@@ -21,6 +21,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import clases.Usuarios;
+import guiSecundarios.Informacion_Sistema;
 import model.Model;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -257,7 +258,11 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 		}
 	}
 	protected void mouseClickedLblNewLabel_3(MouseEvent arg0) {
-		JOptionPane.showMessageDialog(null, "Aqui agregar ventana de información");
+		/*JOptionPane.showMessageDialog(null, "Aqui agregar ventana de información");*/
+		Informacion_Sistema el = new Informacion_Sistema();
+		el.setLocationRelativeTo(null);
+		el.setVisible(true);
+		/*this.setVisible(false);*/
 	}
 	protected void mouseEnteredLblNewLabel_3(MouseEvent e) {
 		lblCreditos.setForeground(SystemColor.BLUE);
