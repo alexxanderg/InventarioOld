@@ -10,12 +10,12 @@
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/commons-digester-2.1.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/commons-logging-1.3.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/itextpdf-5.5.4.jar"/>
-	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/poi-3.9.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/iText-2.1.7.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/itextpdf-5.4.3.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/itext-pdfa-5.4.0.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/jcalendar-1.4.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/jasperreports-6.6.0.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/Util.jar"/>
+	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/poi-3.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
