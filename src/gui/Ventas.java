@@ -436,6 +436,7 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 	}
 
 	public void keyPressed(KeyEvent e) {
+		//De alguna manera el txtproductos y txtpaga comparten este keypressed(Arreglar)
 		if (e.getSource() == tbCompras) {
 			keyPressedTbCompras(e);
 		}
@@ -449,10 +450,10 @@ public class Ventas extends JFrame implements WindowListener, ActionListener, Ke
 
 	public void keyTyped(KeyEvent e) {
 		char c = e.getKeyChar();
-		if ((c < '0' || c > '9') && (c != (char) KeyEvent.VK_DELETE) && (c != (char) KeyEvent.VK_BACK_SPACE)
+		/*if ((c < '0' || c > '9') && (c != (char) KeyEvent.VK_DELETE) && (c != (char) KeyEvent.VK_BACK_SPACE)
 				&& (c != (char) KeyEvent.VK_ENTER) && (c != '.')) {
 			e.consume();
-		}
+		}*/
 		if (txtPaga.getText().length() == 10) {
 			e.consume();
 		}

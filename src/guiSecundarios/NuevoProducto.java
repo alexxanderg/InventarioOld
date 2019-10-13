@@ -56,6 +56,7 @@ public class NuevoProducto extends JDialog implements ActionListener, KeyListene
 	private JLabel lblUMedida;
 	private JComboBox cbUMedida;
 	private TextAutoCompleter ac;
+	private TextAutoCompleter ac1;
 
 	MantenimientoProductos inv;
 	Model model = new Model();
@@ -237,13 +238,15 @@ public class NuevoProducto extends JDialog implements ActionListener, KeyListene
 
 	public void cargar() {
 		
-		/*Jala al area de l texto Medicamento*/		
+		/*Trae la informacion de producto y detalle a sus respectivos textfield*/		
 		ac = new TextAutoCompleter(txtProducto);
+		ac1 = new TextAutoCompleter(txtDeta);
 		Model model1 = new Model();
 		ResultSet rs1 = model1.cargarProductos( );
 		try {
 			while (rs1.next()) {
 				ac.addItem(rs1.getString("producto"));
+				ac1.addItem(rs1.getString("detalles"));
 			}
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "ERROR: " + e);
