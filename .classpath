@@ -16,6 +16,6 @@
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/jcalendar-1.4.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/jasperreports-6.6.0.jar"/>
 	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/Util.jar"/>
-	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/poi-3.5.jar"/>
+	<classpathentry kind="lib" path="B:/Desarrollo/Eclipse/GIT/Inventario/resources/Librerias/JR/poi-3.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
